@@ -1,10 +1,10 @@
 #import data from csv
-setwd('C:/Users/Rolf/Desktop/Dropbox/Hughes committees')
-df=read.csv('Fellows - Sheet1.csv')
-df=df[1:max(which(as.character(df$Last)!='')),]
+setwd('C:/Users/Rolf/Desktop/Dropbox/Hughes')
+df=read.csv('Fellows.csv')
+#df=df[1:max(which(as.character(df$Last)!='')),]
 n=dim(df)[1]
 
-disciplines=read.csv('Fellows - Sheet2.csv')
+disciplines=read.csv('Disciplines.csv')
 
 hierFields=as.character(disciplines[,1])
 
@@ -102,7 +102,7 @@ names(links)=c('source','target','type')
 #
 ##export to JSON to copy paste to script
 #library(rCharts)
-#library(rjson)
+library(rjson)
 #toJSONarray
 #cat(toJSON(list(job_id = "1", 
 #		page = "1", 
